@@ -7,8 +7,8 @@ private:
 	std::string driverFirstName;
 	std::string driverLastName;
 	car driverCar;
-	int numWins;
-	int numLoses;
+	int numWins{};
+	int numLoses{};
 
 public:
 	void setDriverFirstName(std::string name);
@@ -21,6 +21,13 @@ public:
 	int getLosses();
 
  };
+
+drivers::drivers() {
+	driverFirstName = "";
+	driverLastName = "";
+	numWins = 0;
+	numLoses = 0;
+}
 
 void drivers::setDriverFirstName(std::string name) {
 	driverFirstName = name;

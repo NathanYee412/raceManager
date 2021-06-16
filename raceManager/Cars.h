@@ -7,9 +7,9 @@ class car {
 private:
 	std::string make;
 	std::string model;
-	int milage;
-	int hp;
-	bool needsMaintenance;
+	int milage{};
+	int hp{};
+	bool needsMaintenance{};
 	std::vector<int> maintenanceHistory;
 
 public:
@@ -24,6 +24,15 @@ public:
 	bool needMaintenance();
 	int getHp();
 };
+
+// default constructor setting all variables to 0 or ""
+car::car() {
+	make = "";
+	model = "";
+	milage = 0;
+	hp = 0;
+	needsMaintenance = false;
+}
 
 void car::setMake(std::string m) {
 	make = m;
