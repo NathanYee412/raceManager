@@ -15,6 +15,10 @@
 	- see available races
 		- have trasportation costs 
 	- upgrade / parts costs
+	- skill points; increase reaction time
+		- gain skill points by going to practice
+		- cost money to go to practice
+	- game over if out of money or go negative
 
 	Optional:
 	- have race team costs affect strategy

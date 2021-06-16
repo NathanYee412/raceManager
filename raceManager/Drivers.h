@@ -19,6 +19,7 @@ public:
 	car getDriverCar();
 	int getWins();
 	int getLosses();
+	
 
  };
 
@@ -40,6 +41,7 @@ void drivers::setDriverLastName(std::string lname) {
 void drivers::setDriverCar(car c) {
 	driverCar = c;
 }
+
 
 std::string drivers::getDriverFirstName() {
 	return driverFirstName;
