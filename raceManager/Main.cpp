@@ -25,23 +25,63 @@
 		- team member salary come out of budget
 		- food costs
 	- leaderboards 
+	- create upgraded parts for each car with a mapped price
 */
+
+drivers createCharacter() {
+	system("CLS");
+	std::cout << "CHARACTER CREATION" << std::endl;
+	drivers mainCharacter;
+	
+	// declare variables for driver
+	std::string firstName = "";
+	std::string lastName = "";
+	int wins = 0;
+	int losses = 0;
+
+	std::cout << std::endl << "Enter your first name: ";
+	std::cin >> firstName;
+
+	std::cout << "Enter your last name: ";
+	std::cin >> lastName;
+
+	mainCharacter.setDriverFirstName(firstName);
+	mainCharacter.setDriverLastName(lastName);
+	
+
+	return mainCharacter;
+}
 
 
 int main() {
-	drivers user;
-	user.setDriverFirstName("Nathan");
-	user.setDriverLastName("Yee");
-	car mycar;
-	mycar.setMake("Nissan");
-	mycar.setMake("240sx");
-	mycar.setHp(200);
-	mycar.setMilage(120000);
-	user.setDriverCar(mycar);
+
+
+	bool exit = false;
+	int choice = 0;
+
+	// main window loop 
+	while (exit == false) {
+		std::cout << "Select an Option: " << std::endl;
+		std::cout << "(1) Create your Character" << std::endl;
+		std::cout << "(2) Exit" << std::endl;
+		std::cin >> choice;
+
+		switch (choice)
+		{
+		case(1):
+			createCharacter();
+			break;
+		case(2):
+			exit = true;
+			break;
+		default:
+			break;
+		}
+	}
 
 
 
-	std::cout << "Driver: " << user.getDriverFirstName() << std::endl;
+	
 
 	system("pause");
 	return 0;

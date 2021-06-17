@@ -9,11 +9,11 @@ private:
 	std::string model;
 	int milage{};
 	int hp{};
+	int weight{};
 	bool needsMaintenance{};
 	std::vector<int> maintenanceHistory;
 	double qtrMileTime{};
 	double carValue{};
-
 
 public:
 	void setMake(std::string make);
@@ -23,6 +23,7 @@ public:
 	void setHp(int h);
 	void setQtrMileTime(double q);
 	void setCarValue(double v);
+	void setCarWeight(int w);
 	int getMilage();
 	std::string getModel();
 	std::string getMake();
@@ -30,8 +31,10 @@ public:
 	int getHp();
 	double getQtrMileTime();
 	double getCarValue();
+	int getCarWeight();
 };
 
+/*
 // default constructor setting all variables to 0 or ""
 car::car() {
 	make = "";
@@ -42,6 +45,7 @@ car::car() {
 	qtrMileTime = 0.00;
 	carValue = 0.00;
 }
+*/
 
 void car::setMake(std::string m) {
 	make = m;
@@ -65,6 +69,14 @@ void car::setHp(int h) {
 
 void car::setQtrMileTime(double q) {
 	qtrMileTime = q;
+}
+
+void car::setCarWeight(int w) {
+	weight = w;
+}
+
+int car::getCarWeight() {
+	return weight;
 }
 
 double car::getQtrMileTime() {

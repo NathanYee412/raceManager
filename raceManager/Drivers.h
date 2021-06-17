@@ -8,7 +8,7 @@ private:
 	std::string driverLastName;
 	car driverCar;
 	int numWins{};
-	int numLoses{};
+	int numLosses{};
 
 public:
 	void setDriverFirstName(std::string name);
@@ -19,17 +19,19 @@ public:
 	car getDriverCar();
 	int getWins();
 	int getLosses();
+	void incrementWins();
+	void incrementLoses();
 	
-
  };
 
+/*
 drivers::drivers() {
 	driverFirstName = "";
 	driverLastName = "";
 	numWins = 0;
-	numLoses = 0;
+	numLosses = 0;
 }
-
+*/
 void drivers::setDriverFirstName(std::string name) {
 	driverFirstName = name;
 }
@@ -60,5 +62,13 @@ int drivers::getWins() {
 }
 
 int drivers::getLosses() {
-	return numLoses;
+	return numLosses;
+}
+
+void drivers::incrementWins() {
+	numWins++;
+}
+
+void drivers::incrementLoses() {
+	numLosses++;
 }
