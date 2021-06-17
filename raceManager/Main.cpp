@@ -41,7 +41,10 @@ int main() {
 		std::cout << "Select an Option: " << std::endl;
 		std::cout << "(1) Create your Character" << std::endl;
 		std::cout << "(2) See your stats" << std::endl;
-		std::cout << "(3) Exit" << std::endl;
+		std::cout << "(3) Save Your Character" << std::endl;
+		std::cout << "(4) Load a Character" << std::endl;
+		std::cout << "(5) Play Game using current Character" << std::endl;
+		std::cout << "(6) Exit" << std::endl;
 		std::cout << "Your Choice: ";
 		std::cin >> choice;
 
@@ -54,9 +57,20 @@ int main() {
 			printCharacterStats(myCharacter);
 			break;
 		case(3):
+			saveCharacter(myCharacter);
+			break;
+		case(4):
+			loadCharacter(myCharacter);
+			break;
+		case(5):
+			break;
+		case(6):
+			system("CLS");
+			std::cout << "Thank you for playing! " << std::endl;
 			exit = true;
 			break;
 		default:
+			std::cout << "Not an option!" << std::endl;
 			break;
 		}
 	}

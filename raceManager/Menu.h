@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<fstream>
 #include"Drivers.h"
 #include"Cars.h"
 
@@ -65,3 +66,18 @@ void printCharacterStats(drivers d) {
 	system("CLS");
 }
 
+// Save Character Object to "Saves.txt"
+void saveCharacter(drivers character) {
+	std::ofstream file;
+	file.open("Saves.txt", std::ios::app);
+	file.write((char*)&character, sizeof(character));
+	file.close();
+}
+
+void loadCharacter(drivers character) {
+	std::ifstream file;
+	file.open("Saves.txt", std::ios::in);
+	file.seekg(0);
+	file.read((char*)&character, sizeof(character));
+	file.close();
+}
