@@ -1,11 +1,11 @@
 #include<iostream>
 #include"Drivers.h"
 #include"Cars.h"
-
+#include"Menu.h"
 /*
 	To-Do List: 
 	- Create menu where you can load a saved game 
-		- create character
+	x	- create character
 		- save status 
 		- race
 		- upgrade car
@@ -28,50 +28,32 @@
 	- create upgraded parts for each car with a mapped price
 */
 
-drivers createCharacter() {
-	system("CLS");
-	std::cout << "CHARACTER CREATION" << std::endl;
-	drivers mainCharacter;
-	
-	// declare variables for driver
-	std::string firstName = "";
-	std::string lastName = "";
-	int wins = 0;
-	int losses = 0;
-
-	std::cout << std::endl << "Enter your first name: ";
-	std::cin >> firstName;
-
-	std::cout << "Enter your last name: ";
-	std::cin >> lastName;
-
-	mainCharacter.setDriverFirstName(firstName);
-	mainCharacter.setDriverLastName(lastName);
-	
-
-	return mainCharacter;
-}
-
 
 int main() {
 
 
 	bool exit = false;
 	int choice = 0;
+	drivers myCharacter;
 
 	// main window loop 
 	while (exit == false) {
 		std::cout << "Select an Option: " << std::endl;
 		std::cout << "(1) Create your Character" << std::endl;
-		std::cout << "(2) Exit" << std::endl;
+		std::cout << "(2) See your stats" << std::endl;
+		std::cout << "(3) Exit" << std::endl;
+		std::cout << "Your Choice: ";
 		std::cin >> choice;
 
 		switch (choice)
 		{
 		case(1):
-			createCharacter();
+			myCharacter = createCharacter();
 			break;
 		case(2):
+			printCharacterStats(myCharacter);
+			break;
+		case(3):
 			exit = true;
 			break;
 		default:
