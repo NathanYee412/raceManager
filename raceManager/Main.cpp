@@ -6,12 +6,14 @@
 	To-Do List: 
 	- Create menu where you can load a saved game 
 	x	- create character
-		- save status 
+		- save status and progress
 		- race
 		- upgrade car
 		- do maintenance
 	- use coded linked list for maintenance history
-	- have vehicle selection with car prices that user can choose from 
+	- have vehicle selection with car prices that user can choose from
+		- list of pre created car objects with values filled out 
+		- pass by reference
 	- see available races
 		- have trasportation costs 
 	- upgrade / parts costs
@@ -63,6 +65,8 @@ int main() {
 			loadCharacter(myCharacter);
 			break;
 		case(5):
+			// need to add switch statement to other functions
+			playGameMenu(myCharacter);
 			break;
 		case(6):
 			system("CLS");

@@ -30,11 +30,16 @@ public:
  };
 
 /*
-drivers::drivers() {
-	driverFirstName = "";
-	driverLastName = "";
+drivers::drivers(std::string fname, std::string lname, double bRoll) {
+	driverFirstName = fname;
+	driverLastName = lname;
 	numWins = 0;
 	numLosses = 0;
+	bankRoll = bRoll;
+}
+
+~drivers::drivers() {
+	std::cout << "Object has been deleted" << std::endl;
 }
 */
 
