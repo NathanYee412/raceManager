@@ -129,6 +129,15 @@ void playGameMenu(drivers character) {
 	std::cout << "Your Choice: ";
 	std::cin >> choice;
 
+	// switch statement will not cout to terminal 
+	switch (choice) {
+	case(1):
+		std::cout << "RANDOM RACE" << std::endl;
+		break;
+	case(2):
+		std::cout << "UPGRADE YOUR CAR" << std::endl;
+		break;
+	}
 
 
 

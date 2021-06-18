@@ -60,6 +60,7 @@ int main() {
 			break;
 		case(3):
 			saveCharacter(myCharacter);
+			system("CLS");
 			break;
 		case(4):
 			loadCharacter(myCharacter);
