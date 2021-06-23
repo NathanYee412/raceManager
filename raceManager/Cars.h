@@ -16,6 +16,7 @@ private:
 	double carValue{};
 
 public:
+	car();
 	void setMake(std::string make);
 	void setModel(std::string model);
 	void setMilage(int milage);
@@ -34,7 +35,7 @@ public:
 	int getCarWeight();
 };
 
-/*
+
 // default constructor setting all variables to 0 or ""
 car::car() {
 	make = "";
@@ -45,7 +46,7 @@ car::car() {
 	qtrMileTime = 0.00;
 	carValue = 0.00;
 }
-*/
+
 
 void car::setMake(std::string m) {
 	make = m;

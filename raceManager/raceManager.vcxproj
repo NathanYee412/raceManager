@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Cars.h" />
     <ClInclude Include="Drivers.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>

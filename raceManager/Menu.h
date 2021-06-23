@@ -4,6 +4,12 @@
 #include"Drivers.h"
 #include"Cars.h"
 
+// function list
+drivers createCharacter();
+void printCharacterStats(drivers d);
+void saveCharacter(drivers character);
+void loadCharacter(drivers character);
+void playGameMenu(drivers character);
 
 
 // Character Creation function that returns drivers object

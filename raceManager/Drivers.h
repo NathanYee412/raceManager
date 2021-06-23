@@ -12,6 +12,8 @@ private:
 	double bankRoll{};
 
 public:
+	drivers();
+	drivers(std::string fname, std::string lname, double bRoll);
 	void setDriverFirstName(std::string name);
 	void setDriverLastName(std::string name);
 	void setDriverCar(car c);
@@ -29,7 +31,10 @@ public:
 	
  };
 
-/*
+drivers::drivers() {
+
+}
+
 drivers::drivers(std::string fname, std::string lname, double bRoll) {
 	driverFirstName = fname;
 	driverLastName = lname;
@@ -38,10 +43,6 @@ drivers::drivers(std::string fname, std::string lname, double bRoll) {
 	bankRoll = bRoll;
 }
 
-~drivers::drivers() {
-	std::cout << "Object has been deleted" << std::endl;
-}
-*/
 
 void drivers::setDriverFirstName(std::string name) {
 	driverFirstName = name;

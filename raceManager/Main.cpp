@@ -2,6 +2,7 @@
 #include"Drivers.h"
 #include"Cars.h"
 #include"Menu.h"
+#include"LinkedList.h"
 /*
 	To-Do List: 
 	- Create menu where you can load a saved game 
@@ -29,7 +30,6 @@
 	- leaderboards 
 	- create upgraded parts for each car with a mapped price
 */
-
 
 int main() {
 
@@ -79,11 +79,24 @@ int main() {
 			break;
 		}
 	}
-
-
-
 	
+		
+	system("pause");
+	return 0;
+}
+
+
+/*
+* LinkedList implementation test
+* 
+int main() {
+	Node<int> list;
+	list.insertAtHead(1);
+	list.insertAtHead(2);
+	list.insertAtHead(3);
+	list.print();
 
 	system("pause");
 	return 0;
 }
+*/
