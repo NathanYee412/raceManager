@@ -115,30 +115,43 @@ void loadCharacter(drivers character) {
 // Play Game Menu
 void playGameMenu(drivers character) {
 	system("CLS");
-	char choice;
+	
+	// function variables 
+	int choice;
+	bool exit = false;
 
 	car currentCar = character.getDriverCar();
 
 	std::string myCar = currentCar.getMake() + " " + currentCar.getModel();
 
 
-	std::cout << "Select an Option: " << std::endl;
-	std::cout << "(1) Random Race" << std::endl;
-	std::cout << "(2) Upgrade current car: " << myCar << std::endl;
 	
-	std::cout << "Your Choice: ";
-	std::cin >> choice;
 
-	// switch statement will not cout to terminal 
-	switch (choice) {
-	case(1):
-		std::cout << "RANDOM RACE" << std::endl;
-		break;
-	case(2):
-		std::cout << "UPGRADE YOUR CAR" << std::endl;
-		break;
+	while (exit == false) {
+		std::cout << "Select an Option: " << std::endl;
+		std::cout << "(1) Random Race" << std::endl;
+		std::cout << "(2) Upgrade current car: " << myCar << std::endl;
+		std::cout << "(3) Exit" << std::endl;
+		std::cout << "Your Choice: ";
+		std::cin >> choice;
+
+		// switch statement will not cout to terminal 
+		switch (choice) {
+		case(1):
+			std::cout << "RANDOM RACE" << std::endl;
+			break;
+		case(2):
+			std::cout << "UPGRADE YOUR CAR" << std::endl;
+			break;
+		case(3):
+			exit = true;
+			break;
+		default:
+			std::cout << "Not an option" << std::endl;
+			break;
+		}
 	}
 
 
-
+	system("CLS");
 }
